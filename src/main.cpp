@@ -3,6 +3,7 @@
 #include <string>
 
 #include "deck/deck.h"
+#include "card/card.h"
 
 inline void clearConsole()
 {
