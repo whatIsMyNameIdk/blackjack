@@ -2,6 +2,8 @@
 #include <fstream>
 #include <string>
 
+#include "deck/deck.h"
+
 inline void clearConsole()
 {
     // CSI[2J clears screen, CSI[H moves the cursor to top-left corner
