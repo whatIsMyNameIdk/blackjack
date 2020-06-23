@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 void clearConsole()
 {
@@ -9,5 +11,16 @@ void clearConsole()
 int main()
 {
   clearConsole();
+
+  // Read title
+  std::ifstream fd("title");
+  std::string titleLine;
+  while (!fd.eof()) {
+    getline(fd, titleLine);
+    std::cout << titleLine << std::endl;
+  }
+  fd.close();
+
+  
   return 0; 
 }
