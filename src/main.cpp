@@ -11,8 +11,7 @@ inline void clearConsole()
     std::cout << "\x1B[2J\x1B[H";
 }
 
-int main()
-{
+int main() {
   clearConsole();
 
   // Read title
@@ -23,7 +22,5 @@ int main()
     std::cout << titleLine << std::endl;
   }
   fd.close();
-
-  
   return 0; 
 }

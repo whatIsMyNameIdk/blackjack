@@ -1,6 +1,7 @@
 #ifndef CARD_H
 #define CARD_H
 #include <iostream>
+#include <string>
 
 /*
  * Card represents a card from 2 to A.
@@ -11,14 +12,12 @@
  */
 class Card {
 	public:
-    Card(const char* card); // Create card from C-style string.
-                            // If string representation of card is not valid,
-                            // constructor will throw runtime error
+    Card(const std::string &card); // Create card from string.
+                              // If string representation of card is not valid,
+                              // constructor will throw runtime error
 		friend std::ostream& operator<<(std::ostream& os, const Card& card); // Prints card to stdout
 		inline short getValue(); // Returns value of a card. A is treated as 11
 	private:
-		char value[3]; // value[0] is number or a letter
-			             // value[1] is a card suit
-                   // value[2] is '\0'
+		char value; // value is number or a letter. 10 is treated as 1
 };
 #endif
